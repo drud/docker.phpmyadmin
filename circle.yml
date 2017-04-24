@@ -12,3 +12,4 @@ stages:
       # Run the tests
       - type: shell
         command: make test
+
