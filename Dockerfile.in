@@ -1,6 +1,6 @@
 FROM UPSTREAM_REPO
 
-RUN apk add --no-cache curl bash
+RUN apk add --no-cache curl curl-dev bash vim
 
 HEALTHCHECK CMD curl --fail http://localhost > /dev/null || exit 1
 
