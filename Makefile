@@ -55,6 +55,6 @@ include build-tools/makefile_components/base_push.mak
 test: container
 	@docker stop phpmyadmin-test || true
 	@docker rm phpmyadmin-test || true
-	docker run -p 1081:80 -d --name phpmyadmin-test -d `awk '{print $$1}' .docker_image`
+	docker run -p 1081:80 -d --name phpmyadmin-test -d $(DOCKER_REPO):$(VERSION)
 	CONTAINER_NAME=phpmyadmin-test test/containercheck.sh
 	@docker stop phpmyadmin-test && docker rm phpmyadmin-test
