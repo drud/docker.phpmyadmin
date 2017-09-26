@@ -8,10 +8,6 @@
 # Docker repo for a push
 DOCKER_REPO ?= drud/phpmyadmin
 
-# Upstream repo used in the Dockerfile
-PMA_VERSION_TAG ?= 4.7.0-2
-UPSTREAM_REPO ?= phpmyadmin/phpmyadmin:$(PMA_VERSION_TAG)
-
 # Top-level directories to build
 # SRC_DIRS := files drudapi secrets utils
 
