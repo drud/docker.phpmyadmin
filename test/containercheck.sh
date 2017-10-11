@@ -1,11 +1,11 @@
 #!/bin/bash
-while true;
+for i in {1..10}
 do
     status="$(docker ps --format "{{.Status}}" --filter "name=$CONTAINER_NAME" | sed  's/.*(\(.*\)).*/\1/')"
     if [[ "$status" == "healthy" ]]
     then
-        break
+        exit 0
     fi
     sleep 2
 done
-exit 0
+exit 2
